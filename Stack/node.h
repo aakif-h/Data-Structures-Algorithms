@@ -1,16 +1,13 @@
 #ifndef NODE_H
 #define NODE_H
 
-typedef struct node {
+typedef struct Node {
     int value;
-    struct node *prev;
-    struct node *next;
-} node;
+    struct Node *next;
+} Node;
 
-typedef struct stack {
-    struct node *head;
-} stack;
+struct Node *create_node(int val);
 
-int x(void);
+void delete_node(struct Node *n);
 
 #endif //NODE_H
