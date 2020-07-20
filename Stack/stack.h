@@ -9,10 +9,10 @@ typedef struct Stack {
 
 struct Stack *create_stack(void);
 
-void push(struct Stack *s, int key);
+void push_to_stack(struct Stack *s, int key);
 
 int is_empty(struct Stack *s);
 
-struct Node *pop(struct Stack *s);
+struct Node *pop_from_stack(struct Stack *s);
 
 #endif //STACK_H

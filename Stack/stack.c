@@ -8,7 +8,7 @@ struct Stack *create_stack(void) {
     return s;
 }
 
-void push(struct Stack *s, int key) {
+void push_to_stack(struct Stack *s, int key) {
     struct Node *n = create_node(key);
     n->next = s->head;
     s->head = n;
@@ -21,7 +21,7 @@ int is_empty(struct Stack *s) {
     return 0;
 }
 
-struct Node *pop(struct Stack *s) {
+struct Node *pop_from_stack(struct Stack *s) {
     if (is_empty(s)) {
         return NULL;
     }
