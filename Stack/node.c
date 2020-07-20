@@ -5,6 +5,7 @@ struct Node *create_node(int val) {
     struct Node *n =  (struct Node*)malloc(sizeof(struct Node));
     n->value = val;
     n->next = NULL;
+    return n;
 }
 
 

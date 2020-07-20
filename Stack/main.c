@@ -12,17 +12,8 @@ void check_balanced_parantheses(char *parantheses);
 void print_stack_contents(struct Stack *s);
 
 int main(void) {
-    int num_to_generate = rand()%6+5; // between 5 and 10 randomly generated numbers
-    srand(time(NULL));
-    // test the stack's pushing feature
-    // push_stack_test(s, num_to_generate);
-
-    // test the stack's popping feature
-    // pop_stack_test(s, rand()%(num_to_generate-2)+1); //between 1 and n-1 pops
-
     // test with a LeetCode problem
     check_balanced_parantheses("(())()");
-
     return 0;
 }
 
