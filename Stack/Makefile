@@ -1,18 +1,19 @@
 CC = gcc
-CFLAGS = -c -std=c99
-DEP = node.h
+DEBUG = -g
+CFLAGS = -c -Wall $(DEBUG)
+DEP = node.h stack.h
 
 node.o: node.c node.h
-	gcc $(CFLAGS) node.c node.h
+	$(CC) $(CFLAGS) $^
 
-stack.o: stack.c stack.h node.h
-	gcc $(CFLAGS) stack.c stack.h node.h
+stack.o: stack.c $(DEP)
+	$(CC) $(CFLAGS) $^
 
-main.o: main.c node.h stack.h
-	gcc $(CFLAGS) main.c node.h stack.h
+main.o: main.c $(DEP)
+	$(CC) $(CFLAGS) $^
 
 main: main.o node.o stack.o
-	gcc -o main main.o node.o stack.o
+	$(CC) -o $@ $^
 
 clean:
 	del *.o *.gch
