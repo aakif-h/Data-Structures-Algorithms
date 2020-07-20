@@ -15,4 +15,6 @@ int is_empty(struct Stack *s);
 
 struct Node *pop_from_stack(struct Stack *s);
 
+void delete_stack(struct Stack *s);
+
 #endif //STACK_H

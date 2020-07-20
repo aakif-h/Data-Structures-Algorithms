@@ -7,6 +7,7 @@ struct Node *create_node(int val) {
     n->next = NULL;
 }
 
+
 void delete_node(struct Node *n) {
     n->next = NULL;
     free(n);
